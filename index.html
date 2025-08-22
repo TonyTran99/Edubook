@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sách T??ng Tác Nhân–Chia L?p 3: H?c Nh? Ch?i – 10 Phút M?i Ngày!</title>
+    <!-- Thêm Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Thêm font Inter t? Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ??t font m?c ??nh cho toàn b? trang */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Hi?u ?ng m??t mà cho nút CTA */
+        .btn-primary {
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .btn-secondary {
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+        }
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Hi?u ?ng cho các card tính n?ng/testimonial */
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        /* Keyframe for fade-in animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-down {
+            animation: fadeInDown 1s ease-out forwards;
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        .animate-delay-500 {
+            animation-delay: 0.5s;
+        }
+        .animate-delay-1000 {
+            animation-delay: 1s;
+        }
+
+        /* Countdown Timer styling */
+        #countdown-timer {
+            font-variant-numeric: tabular-nums; /* Ensures numbers align */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- 1) HERO Section -->
+    <section class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-700 text-white text-center py-16 px-4 relative overflow-hidden">
+        <div class="container mx-auto max-w-4xl z-10">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down">
+                Nhân–Chia l?p 3: H?c nh? ch?i – <span class="text-yellow-300">10 phút m?i ngày!</span>
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl mb-10 opacity-90 animate-fade-in-up animate-delay-500">
+                5 cu?n sách t??ng tác ?i?n t? dành cho h?c sinh 7–12 tu?i: nhi?u trò ch?i – video h??ng d?n – File PDF in ???c. Ph? huynh ??ng hành d? dàng, con t?p trung và ti?n b? t?ng ngày.
+            </p>
+            <div class="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center items-center animate-fade-in-up animate-delay-1000">
+                <a href="#pricing" class="btn-primary bg-yellow-400 text-blue-800 py-4 px-10 rounded-full text-lg sm:text-xl font-bold hover:bg-yellow-300 focus:outline-none focus:ring-4 focus:ring-yellow-500 shadow-lg inline-block transition-all duration-300 ease-in-out w-full sm:w-auto">
+                    Mua Full Set – Ti?t ki?m 32%
+                </a>
+                <a href="#demo" class="btn-secondary bg-transparent border-2 border-white text-white py-4 px-10 rounded-full text-lg sm:text-xl font-bold hover:bg-white hover:text-blue-700 focus:outline-none focus:ring-4 focus:ring-white shadow-lg inline-block transition-all duration-300 ease-in-out w-full sm:w-auto">
+                    Xem b?n demo mi?n phí
+                </a>
+            </div>
+            <div class="mt-12 text-sm sm:text-base opacity-80 animate-fade-in-up animate-delay-1000">
+                <ul class="list-none p-0 flex flex-wrap justify-center gap-x-6 gap-y-2">
+                    <li class="flex items-center"><svg class="w-5 h-5 mr-1 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>N?i dung bám sát yêu c?u ki?n th?c l?p 3 theo SGK hi?n hành</li>
+                    <li class="flex items-center"><svg class="w-5 h-5 mr-1 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>T??ng tác – ph?n h?i ngay – khuy?n khích con t? h?c</li>
+                    <li class="flex items-center"><svg class="w-5 h-5 mr-1 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Hoàn ti?n 7 ngày n?u không phù h?p</li>
+                </ul>
+            </div>
+            <!-- Hình/Video g?i ý: Mockup 5 bìa sách + video 30s quay c?nh bé thao tác worksheet/mini game -->
+            <!-- Placeholder for visual asset, ideally this would be an actual image/video -->
+            <div class="mt-16 flex justify-center">
+                <img src="https://placehold.co/600x400/DDA0DD/FFFFFF?text=Mockup+5+bìa+sách+%26+Video+demo" alt="Mockup 5 bìa sách và Video demo" class="rounded-xl shadow-2xl max-w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- 2) V?N ?? & H? QU? Section -->
+    <section class="py-16 bg-white px-4">
+        <div class="container mx-auto max-w-5xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6">
+                Vì sao con khó v?i Nhân–Chia?
+            </h2>
+            <p class="text-lg text-gray-700 mb-12 leading-relaxed max-w-3xl mx-auto">
+                Hi?u rõ nh?ng khó kh?n mà con b?n ?ang g?p ph?i khi h?c phép nhân–chia.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start text-left">
+                <!-- V?n ?? -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-blue-700 mb-4">Các V?n ?? Th??ng G?p:</h3>
+                    <div class="flex items-start">
+                        <svg class="w-8 h-8 text-red-500 mr-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>
+                        <div>
+                            <p class="text-lg text-gray-700 font-medium">Ghi nh? máy móc, d? quên sau vài ngày.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-8 h-8 text-red-500 mr-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>
+                        <div>
+                            <p class="text-lg text-gray-700 font-medium">Ít th?c hành trong ng? c?nh ??i s?ng.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-8 h-8 text-red-500 mr-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>
+                        <div>
+                            <p class="text-lg text-gray-700 font-medium">Thi?u ph?n h?i t?c thì nên không bi?t sai ? ?âu.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-8 h-8 text-red-500 mr-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>
+                        <div>
+                            <p class="text-lg text-gray-700 font-medium">Ph? huynh b?n r?n, khó kèm sát m?i ngày.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- H?u qu? -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-red-700 mb-4">H?u Qu? N?u Không X? Lý S?m:</h3>
+                    <div class="flex items-start">
+                        <svg class="w-8 h-8 text-orange-500 mr-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.554 2.503-1.554 3.268 0l.548 1.102a1 1 0 00.95.696h1.948c1.559 0 2.318 1.804 1.202 3.018l-1.559 1.559a1 1 0 00-.272 1.064l.354 1.77a1 1 0 01-1.487 1.025l-1.559-.832a1 1 0 00-1.127 0l-1.559.832a1 1 0 01-1.487-1.025l.354-1.77a1 1 0 00-.272-1.064l-1.559-1.559c-1.116-1.214-.357-3.018 1.202-3.018h1.948a1 1 0 00.95-.696l.548-1.102zM11 15a1 1 0 10-2 0v2a1 1 0 102 0v-2zm0-7a1 1 0 10-2 0v4a1 1 0 102 0V8z" clip-rule="evenodd"></path></svg>
+                        <div>
+                            <p class="text-lg text-gray-700 font-medium">M?t n?n t?ng cho các phép tính l?n và bài toán có l?i v?n.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-8 h-8 text-orange-500 mr-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.554 2.503-1.554 3.268 0l.548 1.102a1 1 0 00.95.696h1.948c1.559 0 2.318 1.804 1.202 3.018l-1.559 1.559a1 1 0 00-.272 1.064l.354 1.77a1 1 0 01-1.487 1.025l-1.559-.832a1 1 0 00-1.127 0l-1.559.832a1 1 0 01-1.487-1.025l.354-1.77a1 1 0 00-.272-1.064l-1.559-1.559c-1.116-1.214-.357-3.018 1.202-3.018h1.948a1 1 0 00.95-.696l.548-1.102zM11 15a1 1 0 10-2 0v2a1 1 0 102 0v-2zm0-7a1 1 0 10-2 0v4a1 1 0 102 0V8z" clip-rule="evenodd"></path></svg>
+                        <div>
+                            <p class="text-lg text-gray-700 font-medium">T? ti khi lên l?p, s? ki?m tra.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-8 h-8 text-orange-500 mr-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.554 2.503-1.554 3.268 0l.548 1.102a1 1 0 00.95.696h1.948c1.559 0 2.318 1.804 1.202 3.018l-1.559 1.559a1 1 0 00-.272 1.064l.354 1.77a1 1 0 01-1.487 1.025l-1.559-.832a1 1 0 00-1.127 0l-1.559.832a1 1 0 01-1.487-1.025l.354-1.77a1 1 0 00-.272-1.064l-1.559-1.559c-1.116-1.214-.357-3.018 1.202-3.018h1.948a1 1 0 00.95-.696l.548-1.102zM11 15a1 1 0 10-2 0v2a1 1 0 102 0v-2zm0-7a1 1 0 10-2 0v4a1 1 0 102 0V8z" clip-rule="evenodd"></path></svg>
+                        <div>
+                            <p class="text-lg text-gray-700 font-medium">Gia t?ng áp l?c gia ?ình khi h?c bài m?i t?i.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3) GI?I PHÁP – SÁCH T??NG TÁC Section -->
+    <section class="py-16 bg-gray-50 px-4">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12">
+                Gi?i Pháp: B? Sách T??ng Tác Giúp Con Yêu Toán
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- H?c qua t??ng tác 3 l?p: ??c – Nhìn -->
+                <div class="p-8 bg-white rounded-xl shadow-lg card-hover transform transition duration-300">
+                    <div class="bg-blue-100 p-4 rounded-full inline-block mb-4">
+                        <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">??c – Nhìn: Ki?n th?c s?ng ??ng</h3>
+                    <p class="text-gray-700 leading-relaxed">Ki?n th?c trình bày ng?n g?n, nhi?u màu s?c, hình ?nh tr?c quan giúp con d? hi?u và ghi nh?.</p>
+                </div>
+                <!-- H?c qua t??ng tác 3 l?p: Làm – Ch?i -->
+                <div class="p-8 bg-white rounded-xl shadow-lg card-hover transform transition duration-300">
+                    <div class="bg-purple-100 p-4 rounded-full inline-block mb-4">
+                        <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 13l-3 3-3-3m3-6l3-3 3 3m-3 6h6m-6-6h6"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Làm – Ch?i: H?c mà nh? ch?i</h3>
+                    <p class="text-gray-700 leading-relaxed">Mini game c?ng c? ki?n th?c ngay sau khi h?c, giúp con h?ng thú và ti?p thu hi?u qu?.</p>
+                </div>
+                <!-- H?c qua t??ng tác 3 l?p: Xem – B?t ch??c -->
+                <div class="p-8 bg-white rounded-xl shadow-lg card-hover transform transition duration-300">
+                    <div class="bg-green-100 p-4 rounded-full inline-block mb-4">
+                        <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14m-5 3v-3a3 3 0 00-3-3H4a3 3 0 00-3 3v3m3 3h4a3 3 0 003-3v-3m0-12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Xem – B?t ch??c: Th?c hành d? dàng</h3>
+                    <p class="text-gray-700 leading-relaxed">Video h??ng d?n ng?n, rõ ràng, th?c hành cùng bé, giúp con làm quen và t? tin.</p>
+                </div>
+            </div>
+            <div class="mt-12 p-8 bg-blue-50 rounded-xl shadow-inner max-w-2xl mx-auto">
+                <h3 class="text-2xl font-bold text-blue-800 mb-4">Phù h?p cho:</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Ph? huynh có con h?c l?p 3 mu?n con h?c nhanh, hi?u sâu, h?ng thú v?i Toán.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4) BÊN TRONG B? 5 CU?N Section -->
+    <section class="py-16 bg-white px-4">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12">
+                Khám Phá Chi Ti?t B? 5 Cu?n Sách T??ng Tác
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cu?n 1 -->
+                <div class="p-6 bg-gray-50 rounded-xl shadow-md card-hover transform transition duration-300 border border-blue-200">
+                    <h3 class="text-xl font-bold text-blue-700 mb-3">1. Ôn t?p s? & c?ng–tr? trong ph?m vi 1000</h3>
+                    <ul class="list-disc list-inside text-gray-700 text-base space-y-2">
+                        <li>Ôn c?u trúc s?, làm tròn, ??t tính – tính.</li>
+                        <li>M?o c?ng–tr? nhanh, h?n ch? nh?m khi nh?/nh? m??n.</li>
+                        <li>Trò ch?i “???ng ?ua c?ng–tr?” + video h??ng d?n.</li>
+                    </ul>
+                </div>
+                <!-- Cu?n 2 -->
+                <div class="p-6 bg-gray-50 rounded-xl shadow-md card-hover transform transition duration-300 border border-purple-200">
+                    <h3 class="text-xl font-bold text-purple-700 mb-3">2. B?ng nhân 2,5,3,4 – “Nh?p ?i?u nhân”</h3>
+                    <ul class="list-disc list-inside text-gray-700 text-base space-y-2">
+                        <li>Quy lu?t nhân 2/3/4/5; chi ti?t ph??ng pháp th?c hành t?ng phép nhân.</li>
+                        <li>Hình ?nh minh ho? ??c s?c giúp nh? lâu.</li>
+                        <li>Game ch?n ?áp án – ph?n h?i t?c thì.</li>
+                    </ul>
+                </div>
+                <!-- Cu?n 3 -->
+                <div class="p-6 bg-gray-50 rounded-xl shadow-md card-hover transform transition duration-300 border border-green-200">
+                    <h3 class="text-xl font-bold text-green-700 mb-3">3. B?ng nhân 6,7,8,9 – “V??t ??nh th? thách”</h3>
+                    <ul class="list-disc list-inside text-gray-700 text-base space-y-2">
+                        <li>M?o nh? 6–9 theo c?m; tránh b?y “7×8, 6×7, 8×9”.</li>
+                        <li>Bài t?p t?ng d?n ?? khó + b?ng theo dõi ti?n ??.</li>
+                        <li>Video “1 phút thu?c b?ng 7”.</li>
+                    </ul>
+                </div>
+                <!-- Cu?n 4 -->
+                <div class="p-6 bg-gray-50 rounded-xl shadow-md card-hover transform transition duration-300 border border-orange-200">
+                    <h3 class="text-xl font-bold text-orange-700 mb-3">4. B?ng chia 2,3,4,5 – “Ai nhanh h?n?”</h3>
+                    <ul class="list-disc list-inside text-gray-700 text-base space-y-2">
+                        <li>Liên h? ng??c v?i nhân, m?o ki?m tra nhanh.</li>
+                        <li>Bài toán th?c t? (chia k?o, x?p nhóm).</li>
+                        <li>Mini game th?c hành phép chia nhanh.</li>
+                    </ul>
+                </div>
+                <!-- Cu?n 5 -->
+                <div class="p-6 bg-gray-50 rounded-xl shadow-md card-hover transform transition duration-300 border border-red-200">
+                    <h3 class="text-xl font-bold text-red-700 mb-3">5. B?ng chia 6,7,8,9 – “S?n kho báu chia s?”</h3>
+                    <ul class="list-disc list-inside text-gray-700 text-base space-y-2">
+                        <li>M?o: t?ng ch? s? c?a 9, g?p ?ôi 3 l?n cho 8,…</li>
+                        <li>L? trình 7 ngày “S?n kho báu” cùng c??p bi?n.</li>
+                        <!-- Removed this line to align with user's implied intent for exclusive Full Set feature -->
+                        <!-- <li>Video h??ng d?n h?c nhanh b?ng chia 6–9.</li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 p-8 bg-blue-100 rounded-xl shadow-lg max-w-3xl mx-auto text-left">
+                <h3 class="text-2xl font-bold text-blue-800 mb-4">M?i cu?n g?m:</h3>
+                <ul class="list-disc list-inside text-gray-800 text-lg space-y-2">
+                    <li>Sách t??ng tác công ngh? 4.0</li>
+                    <li>File PDF 15–17 trang in ???c</li>
+                    <li>Trò ch?i t??ng tác</li>
+                    <li>?áp án & g?i ý</li>
+                    <li>Video h??ng d?n</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5) CÁCH S? D?NG (3 B??C) Section -->
+    <section class="py-16 bg-gray-100 px-4">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12">
+                H??ng D?n 3 B??c Giúp Con H?c Hi?u Qu?
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- B??c 1 -->
+                <div class="p-6 bg-white rounded-xl shadow-lg card-hover transform transition duration-300">
+                    <div class="w-16 h-16 mx-auto bg-blue-600 text-white rounded-full flex items-center justify-center text-3xl font-bold mb-4">1</div>
+                    <h3 class="text-xl font-semibold mb-3">Ch?n bài h?c</h3>
+                    <p class="text-gray-700">Con ch?n bài h?c theo ch??ng trình sách giáo khoa.</p>
+                </div>
+                <!-- B??c 2 -->
+                <div class="p-6 bg-white rounded-xl shadow-lg card-hover transform transition duration-300">
+                    <div class="w-16 h-16 mx-auto bg-purple-600 text-white rounded-full flex items-center justify-center text-3xl font-bold mb-4">2</div>
+                    <h3 class="text-xl font-semibold mb-3">T??ng tác & Th?c hành</h3>
+                    <p class="text-gray-700">??c h??ng d?n ki?n th?c, tham gia trò ch?i th?c hành, xem video h??ng d?n.</p>
+                </div>
+                <!-- B??c 3 -->
+                <div class="p-6 bg-white rounded-xl shadow-lg card-hover transform transition duration-300">
+                    <div class="w-16 h-16 mx-auto bg-green-600 text-white rounded-full flex items-center justify-center text-3xl font-bold mb-4">3</div>
+                    <h3 class="text-xl font-semibold mb-3">Làm bài t?p</h3>
+                    <p class="text-gray-700">Hoàn thành bài t?p th?c hành theo các c?p ?? ?? c?ng c? ki?n th?c.</p>
+                </div>
+            </div>
+            <div class="mt-12 p-8 bg-yellow-50 rounded-xl shadow-inner max-w-2xl mx-auto text-left">
+                <h3 class="text-2xl font-bold text-yellow-800 mb-4">Tips cho ph? huynh:</h3>
+                <ul class="list-disc list-inside text-gray-800 text-lg space-y-2">
+                    <li>??t l?ch c? ??nh sau b?a t?i.</li>
+                    <li>Khen th??ng nh? khi con hoàn thành 5 ngày liên ti?p.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6) DEMO Section -->
+    <section id="demo" class="py-16 bg-white px-4">
+        <div class="container mx-auto max-w-5xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12">
+                Tr?i Nghi?m Ngay B?n Demo Mi?n Phí
+            </h2>
+            <p class="text-lg text-gray-700 mb-10 leading-relaxed max-w-3xl mx-auto">
+                Xem tr??c n?i dung và c?m nh?n s? hi?u qu? c?a b? sách t??ng tác tr??c khi quy?t ??nh mua.
+            </p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                <div class="w-full md:w-1/2 flex flex-col items-center p-6 bg-gray-50 rounded-xl shadow-lg border border-blue-200">
+                    <img src="https://placehold.co/400x250/C8A2C8/FFFFFF?text=Trang+PDF+m?u" alt="Trang PDF m?u" class="rounded-lg shadow-md mb-6 w-full max-w-sm">
+                    <h3 class="text-xl font-semibold mb-3">Xem trang PDF m?u</h3>
+                    <p class="text-gray-700 mb-4">Khám phá cách trình bày ki?n th?c và các trò ch?i t??ng tác.</p>
+                    <a href="#" class="btn-primary bg-blue-600 text-white py-3 px-6 rounded-full font-semibold hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                        M? PDF Demo
+                    </a>
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col items-center p-6 bg-gray-50 rounded-xl shadow-lg border border-purple-200">
+                    <img src="https://placehold.co/400x250/ADD8E6/FFFFFF?text=Video+demo" alt="Video demo" class="rounded-lg shadow-md mb-6 w-full max-w-sm">
+                    <h3 class="text-xl font-semibold mb-3">Xem video h??ng d?n 30s</h3>
+                    <p class="text-gray-700 mb-4">Video ng?n g?n, mô t? cách bé thao tác v?i worksheet và mini game.</p>
+                    <a href="#" class="btn-primary bg-purple-600 text-white py-3 px-6 rounded-full font-semibold hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-300">
+                        Xem Video Demo
+                    </a>
+                </div>
+            </div>
+            <div class="mt-10 p-6 bg-yellow-100 rounded-xl shadow-inner max-w-md mx-auto">
+                <h3 class="text-xl font-semibold mb-3 text-yellow-800">T?i mi?n phí Sách dùng th?</h3>
+                <p class="text-gray-700 mb-4">T?i ngay 1 sách t??ng tác ?? con tr?i nghi?m tr?c ti?p!</p>
+                <a href="#" class="btn-secondary bg-yellow-600 text-white py-3 px-6 rounded-full font-semibold hover:bg-yellow-700 focus:outline-none focus:ring-4 focus:ring-yellow-300">
+                    T?i Sách Mi?n Phí
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7) B?NG GIÁ & GÓI S?N PH?M Section -->
+    <section id="pricing" class="py-16 bg-gray-50 px-4">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12">
+                Ch?n Gói Phù H?p Cho Con B?n
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <!-- GÓI L? -->
+                <div class="p-8 bg-white rounded-xl shadow-lg card-hover transform transition duration-300 border-2 border-gray-200">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">GÓI L?</h3>
+                    <p class="text-5xl font-extrabold text-blue-700 mb-6">
+                        29.000?<span class="text-xl text-gray-500 ml-2">/ cu?n</span>
+                    </p>
+                    <ul class="text-lg text-left space-y-3 mb-8">
+                        <li class="flex items-center"><svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Sách t??ng tác công ngh? 4.0</li>
+                        <li class="flex items-center"><svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Video h??ng d?n, game th?c hành</li>
+                        <li class="flex items-center"><svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>File PDF in ???c</li>
+                    </ul>
+                    <a href="#" class="btn-primary bg-blue-600 text-white py-4 px-8 rounded-full text-xl font-bold hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 shadow-lg inline-block w-full">
+                        CH?N MUA L?
+                    </a>
+                </div>
+
+                <!-- FULL SET 5 CU?N – KHUY?N NGH? -->
+                <div class="relative p-8 bg-blue-700 text-white rounded-xl shadow-2xl card-hover transform transition duration-300 border-4 border-yellow-400">
+                    <span class="absolute top-0 right-0 -mt-4 -mr-4 bg-yellow-400 text-blue-800 text-sm font-bold py-2 px-4 rounded-full shadow-lg rotate-6">
+                        KHUY?N NGH?
+                    </span>
+                    <h3 class="text-3xl font-bold mb-4">FULL SET 5 CU?N</h3>
+                    <p class="text-5xl font-extrabold text-yellow-300 mb-6">
+                        99.000?
+                        <span class="text-xl text-gray-300 line-through ml-2">145.000?</span>
+                    </p>
+                    <p class="text-2xl font-semibold mb-6">Ti?t ki?m ~32%</p>
+                    <ul class="text-lg text-left space-y-3 mb-8">
+                        <li class="flex items-center"><svg class="w-6 h-6 text-yellow-300 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Tr?n b? 5 cu?n sách t??ng tác PDF</li>
+                        <li class="flex items-center"><svg class="w-6 h-6 text-yellow-300 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Truy c?p t?t c? video h??ng d?n</li>
+                        <li class="flex items-center"><svg class="w-6 h-6 text-yellow-300 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>T?NG: B? sách AI CÙNG CON – 8 B??C KH?I ??U TH?I ??I M?I (PDF)</li>
+                        <li class="flex items-center"><svg class="w-6 h-6 text-yellow-300 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>T?NG: L?ch 7 ngày “Th? thách Nhân–Chia”</li>
+                        <li class="flex items-center"><svg class="w-6 h-6 text-yellow-300 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>T?NG: Sticker s? (PNG)</li>
+                        <li class="flex items-center"><svg class="w-6 h-6 text-yellow-300 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Video mini “10 l?i hay sai khi chia 6–9”</li>
+                    </ul>
+                    <a href="#" class="btn-primary bg-yellow-400 text-blue-800 py-4 px-8 rounded-full text-xl font-bold hover:bg-yellow-300 focus:outline-none focus:ring-4 focus:ring-yellow-500 shadow-lg inline-block w-full">
+                        MUA FULL SET – TI?T KI?M 32%
+                    </a>
+                </div>
+            </div>
+
+            <!-- B?ng so sánh nhanh -->
+            <div class="mt-16 bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold mb-6 text-center">So Sánh Nhanh Các Gói</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tính n?ng</th>
+                                <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Gói L?</th>
+                                <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Full Set 5 Cu?n</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-900">Sách t??ng tác công ngh? 4.0</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-center"><svg class="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg></td>
+                                <td class="px-6 py-4 whitespace-nowrap text-center"><svg class="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg></td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-900">Video h??ng d?n, game th?c hành</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-center"><svg class="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg></td>
+                                <td class="px-6 py-4 whitespace-nowrap text-center"><svg class="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg></td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-900">File PDF in ???c</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-center"><svg class="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg></td>
+                                <td class="px-6 py-4 whitespace-nowrap text-center"><svg class="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg></td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-900">B? sách AI CÙNG CON (PDF)</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-center text-red-500 text-2xl font-bold">X</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-center"><svg class="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg></td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-900">L?ch 7 ngày “Th? thách Nhân–Chia”</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-center text-red-500 text-2xl font-bold">X</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-center"><svg class="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg></td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-900">Sticker s? (PNG)</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-center text-red-500 text-2xl font-bold">X</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-center"><svg class="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg></td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-900">Video mini “10 l?i hay sai khi chia 6–9”</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-center text-red-500 text-2xl font-bold">X</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-center"><svg class="w-6 h-6 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- B?o ch?ng -->
+            <div class="mt-12 p-8 bg-blue-100 rounded-xl shadow-inner max-w-2xl mx-auto text-left">
+                <h3 class="text-2xl font-bold text-blue-800 mb-4">Cam K?t T? Chúng Tôi:</h3>
+                <ul class="list-disc list-inside text-gray-800 text-lg space-y-2">
+                    <li><span class="font-bold">Hoàn ti?n 7 ngày</span> n?u không phù h?p.</li>
+                    <li>H? tr? k? thu?t qua Zalo/Email trong gi? hành chính.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8) CH?NG TH?C (SOCIAL PROOF) Section -->
+    <section class="py-16 bg-white px-4">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12">
+                K?t Qu? Th?c T? T? Ph? Huynh
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Trích review ng?n -->
+                <div class="p-8 bg-gray-50 rounded-xl shadow-lg card-hover transform transition duration-300 border border-yellow-200">
+                    <p class="text-gray-800 italic text-xl mb-6">
+                        "M?i t?i 10 phút, sau 1 tu?n con thu?c b?ng 7–8, không còn s? ki?m tra mi?ng."
+                    </p>
+                    <div class="flex items-center justify-center">
+                        <img src="https://placehold.co/60x60/ADD8E6/FFFFFF?text=PH" alt="?nh ph? huynh" class="w-14 h-14 rounded-full mr-4 object-cover">
+                        <div>
+                            <p class="font-semibold text-gray-900 text-lg">Ph? huynh l?p 3A</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ?nh bé ?ang h?c -->
+                <div class="p-8 bg-gray-50 rounded-xl shadow-lg card-hover transform transition duration-300 border border-green-200">
+                    <img src="https://placehold.co/400x250/90EE90/FFFFFF?text=?nh+bé+?ang+h?c" alt="?nh bé ?ang h?c" class="rounded-lg shadow-md mb-6 w-full max-w-md mx-auto">
+                    <p class="text-gray-700 text-lg">Hình ?nh minh h?a bé ?ang t??ng tác v?i sách.</p>
+                </div>
+            </div>
+            <!-- Logo nhóm/l?p/CLB ?ã th? nghi?m (n?u có) -->
+            <div class="mt-12 p-8 bg-blue-50 rounded-xl shadow-inner max-w-xl mx-auto">
+                <h3 class="text-xl font-bold text-blue-800 mb-4">Các Tr??ng H?c & CLB Tin Dùng:</h3>
+                <div class="flex flex-wrap justify-center items-center gap-6">
+                    <!-- Placeholder for logos -->
+                    <img src="https://placehold.co/120x60/E0BBE4/FFFFFF?text=Logo+Tr??ng+1" alt="Logo Tr??ng 1" class="h-10 opacity-75 grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="https://placehold.co/120x60/957DAD/FFFFFF?text=Logo+CLB+2" alt="Logo CLB 2" class="h-10 opacity-75 grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="https://placehold.co/120x60/D291BC/FFFFFF?text=Logo+Trung+Tâm+3" alt="Logo Trung Tâm 3" class="h-10 opacity-75 grayscale hover:grayscale-0 transition-all duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9) FAQ Section -->
+    <section class="py-16 bg-gray-100 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">
+                Nh?ng Câu H?i Th??ng G?p
+            </h2>
+            <div class="space-y-6">
+                <!-- Câu h?i 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md cursor-pointer group hover:bg-gray-50 transition-all duration-300" onclick="toggleFAQ(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-gray-800">1. Sách ch?y trên thi?t b? nào?</h3>
+                        <svg class="w-6 h-6 text-gray-600 transform group-[.active]:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <p class="mt-4 text-gray-700 hidden group-[.active]:block">?i?n tho?i/máy tính b?ng/máy tính có trình ??c PDF. Video xem qua link/QR.</p>
+                </div>
+                <!-- Câu h?i 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md cursor-pointer group hover:bg-gray-50 transition-all duration-300" onclick="toggleFAQ(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-gray-800">2. Có th? in ra không?</h3>
+                        <svg class="w-6 h-6 text-gray-600 transform group-[.active]:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <p class="mt-4 text-gray-700 hidden group-[.active]:block">Có. Worksheet thi?t k? in tr?ng ?en ti?t ki?m m?c.</p>
+                </div>
+                <!-- Câu h?i 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md cursor-pointer group hover:bg-gray-50 transition-all duration-300" onclick="toggleFAQ(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-gray-800">3. Mua 1 dùng cho m?y con?</h3>
+                        <svg class="w-6 h-6 text-gray-600 transform group-[.active]:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <p class="mt-4 text-gray-700 hidden group-[.active]:block">Gi?y phép dùng trong gia ?ình. Dùng cho l?p c?n gi?y phép l?p/tr??ng.</p>
+                </div>
+                <!-- Câu h?i 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-md cursor-pointer group hover:bg-gray-50 transition-all duration-300" onclick="toggleFAQ(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-gray-800">4. Con h?c bao lâu thì ti?n b??</h3>
+                        <svg class="w-6 h-6 text-gray-600 transform group-[.active]:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <p class="mt-4 text-gray-700 hidden group-[.active]:block">Tu? n?n t?ng t?ng bé. L? trình g?i ý 10 phút/ngày trong 7–14 ngày/b?.</p>
+                </div>
+                <!-- Câu h?i 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-md cursor-pointer group hover:bg-gray-50 transition-all duration-300" onclick="toggleFAQ(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-gray-800">5. Tôi không rành công ngh?, ???c h? tr? không?</h3>
+                        <svg class="w-6 h-6 text-gray-600 transform group-[.active]:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <p class="mt-4 text-gray-700 hidden group-[.active]:block">Có. H??ng d?n video 60s + h? tr? Zalo/Email.</p>
+                </div>
+                <!-- Câu h?i 6 -->
+                <div class="bg-white p-6 rounded-xl shadow-md cursor-pointer group hover:bg-gray-50 transition-all duration-300" onclick="toggleFAQ(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-gray-800">6. Có hoàn ti?n n?u không phù h?p?</h3>
+                        <svg class="w-6 h-6 text-gray-600 transform group-[.active]:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <p class="mt-4 text-gray-700 hidden group-[.active]:block">Có, trong 7 ngày. Vui lòng cho bi?t lý do ?? chúng tôi c?i ti?n.</p>
+                </div>
+                <!-- Câu h?i 7 -->
+                <div class="bg-white p-6 rounded-xl shadow-md cursor-pointer group hover:bg-gray-50 transition-all duration-300" onclick="toggleFAQ(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-gray-800">7. Tôi b? m?t file thì sao?</h3>
+                        <svg class="w-6 h-6 text-gray-600 transform group-[.active]:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <p class="mt-4 text-gray-700 hidden group-[.active]:block">Liên h? b?ng email/?i?n tho?i ?ã mua, chúng tôi g?i l?i mi?n phí.</p>
+                </div>
+                <!-- Câu h?i 8 -->
+                <div class="bg-white p-6 rounded-xl shadow-md cursor-pointer group hover:bg-gray-50 transition-all duration-300" onclick="toggleFAQ(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-gray-800">8. Sách có ???c B? GD&?T phê duy?t không?</h3>
+                        <svg class="w-6 h-6 text-gray-600 transform group-[.active]:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <p class="mt-4 text-gray-700 hidden group-[.active]:block">Không. ?ây là tài li?u b? tr? bám sát yêu c?u ki?n th?c l?p 3 theo SGK hi?n hành.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10) CTA CU?I & KH?N C?P NH? Section -->
+    <section class="py-20 bg-gradient-to-r from-purple-700 to-blue-600 text-white text-center px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl sm:text-5xl font-extrabold mb-8 leading-tight">
+                ??ng ?? Con S? Toán Thêm M?t K? N?a!
+            </h2>
+            <p class="text-xl sm:text-2xl mb-10 opacity-90">
+                B?t ??u hôm nay v?i 10 phút – con ti?n b? t?ng ngày.
+            </p>
+            <div class="bg-white text-gray-800 p-8 rounded-xl shadow-2xl inline-block max-w-md w-full animate-fade-in-up transform transition-all duration-500 hover:scale-105">
+                <h3 class="text-3xl font-bold mb-4">?u ?ãi Ra M?t ??c Bi?t!</h3>
+                <p class="text-4xl font-extrabold text-red-600 mb-6">
+                    <span id="countdown-timer" class="font-mono"></span>
+                </p>
+                <p class="text-xl font-semibold text-gray-700 mb-6">
+                    Gi?m <span class="text-red-600 font-bold">20%</span> ch? trong 72 gi?!
+                </p>
+                <div class="space-y-4">
+                    <a href="#pricing" class="btn-primary bg-yellow-400 text-blue-800 py-4 px-8 rounded-full text-xl font-bold hover:bg-yellow-300 focus:outline-none focus:ring-4 focus:ring-yellow-500 shadow-lg inline-block w-full">
+                        MUA FULL SET – TI?T KI?M NGAY!
+                    </a>
+                    <a href="#demo" class="btn-secondary bg-transparent border-2 border-gray-400 text-gray-700 py-4 px-8 rounded-full text-xl font-bold hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-300 shadow-lg inline-block w-full">
+                        Xem b?n demo mi?n phí
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11) CHÍNH SÁCH & PHÁP LÝ Section -->
+    <section class="py-16 bg-gray-50 px-4">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12">
+                Chính Sách & Pháp Lý
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <div class="p-6 bg-white rounded-xl shadow-md border border-gray-200">
+                    <h3 class="text-xl font-bold text-blue-700 mb-3">Quy?n S? D?ng</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Quy?n s? d?ng cá nhân/gia ?ình.</li>
+                        <li>Không chia s? công khai.</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-md border border-gray-200">
+                    <h3 class="text-xl font-bold text-purple-700 mb-3">B?o M?t Thông Tin</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Ch? thu email ph? huynh ?? giao file/ch?m sóc.</li>
+                        <li>Không thu th?p d? li?u tr?.</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-md border border-gray-200 col-span-full">
+                    <h3 class="text-xl font-bold text-green-700 mb-3">B?n Quy?n</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Sách t??ng tác có b?n quy?n.</li>
+                        <li>N?i dung ???c thi?t k? bám sát ch??ng trình SGK.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12) THÔNG TIN LIÊN H? Section -->
+    <section class="py-16 bg-white px-4">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12">
+                Liên H? V?i Chúng Tôi
+            </h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                <div class="p-6 bg-gray-50 rounded-xl shadow-md border border-blue-200 w-full md:w-1/2">
+                    <div class="bg-blue-100 p-3 rounded-full inline-block mb-4">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Zalo/Hotline H? Tr?</h3>
+                    <p class="text-gray-700 text-lg">[?i?n s? ?i?n tho?i]</p>
+                    <p class="text-gray-500 text-sm">(Gi? hành chính)</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-xl shadow-md border border-purple-200 w-full md:w-1/2">
+                    <div class="bg-purple-100 p-3 rounded-full inline-block mb-4">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Email H? Tr?</h3>
+                    <p class="text-gray-700 text-lg">[?i?n email]</p>
+                </div>
+            </div>
+            <div class="mt-8 p-6 bg-gray-50 rounded-xl shadow-md border border-green-200 w-full max-w-md mx-auto">
+                <div class="bg-green-100 p-3 rounded-full inline-block mb-4">
+                    <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H2v-2a3 3 0 015.356-1.857M17 20v-2c0-.653-.153-1.267-.406-1.838m-11.979 0A3 3 0 012 18v2h15m-11.979 0a3 3 0 00-5.356 1.857M3 12h18M3 8h18m-9 4V4"></path></svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Fanpage</h3>
+                <p class="text-gray-700 text-lg"><a href="#" class="text-blue-600 hover:underline">[?i?n link Fanpage]</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ph?n Chân trang -->
+    <footer class="bg-gray-800 text-white py-8 px-4">
+        <div class="container mx-auto max-w-4xl text-center text-sm">
+            <p>&copy; 2024 Sách t??ng tác Nhân–Chia l?p 3. M?i quy?n ???c b?o reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="text-blue-400 hover:underline">Chính sách b?o m?t</a> | 
+                <a href="#" class="text-blue-400 hover:underline">?i?u kho?n d?ch v?</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for FAQ accordion
+        function toggleFAQ(element) {
+            element.classList.toggle('active');
+        }
+
+        // JavaScript for Countdown Timer
+        function startCountdown(duration, display) {
+            let timer = duration, hours, minutes, seconds;
+            setInterval(function () {
+                hours = parseInt(timer / 3600, 10);
+                minutes = parseInt((timer % 3600) / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = hours + ":" + minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = 0; // Stop at 0:00:00
+                    // You can add logic here to hide the countdown or change text
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            // Initialize countdown for 72 hours (72 * 3600 seconds)
+            const seventyTwoHours = 72 * 3600;
+            const display = document.querySelector('#countdown-timer');
+            if (display) {
+                startCountdown(seventyTwoHours, display);
+            }
+        };
+    </script>
+</body>
+</html>
