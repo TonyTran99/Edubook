@@ -139,11 +139,7 @@
             @apply bg-gradient-to-r from-indigo-500 to-indigo-700 text-white focus:ring-indigo-400;
             @apply hover:from-indigo-600 hover:to-indigo-800; /* Darker gradient on hover */
         }
-        /* Custom text gradient for button text with added text-shadow */
-        .text-gradient-light {
-            @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-200;
-            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Added text shadow for more pop */
-        }
+        /* The custom text-gradient-light class is no longer needed as styling is applied directly to the span. */
     </style>
 </head>
 <body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
@@ -445,7 +441,7 @@
                         <li class="flex items-center"><svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>File PDF in được</li>
                     </ul>
                     <button onclick="openPaymentModal({title: 'Thanh toán VietQR – Mua lẻ 1 cuốn', amount: 29000})" class="mt-8 w-full btn-payment-highlight btn-payment-highlight-pink">
-                        <span class="text-gradient-light">CHỌN MUA LẺ</span>
+                        <span class="text-red-600 font-extrabold animate-pulse">CHỌN MUA LẺ</span>
                     </button>
                 </div>
 
@@ -469,7 +465,7 @@
                         <li class="flex items-center"><svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>TẶNG: Checklist công việc hằng ngày cho con</li>
                     </ul>
                     <button onclick="openPaymentModal({title: 'Thanh toán VietQR – Combo 5 cuốn', amount: 99000})" class="mt-8 w-full btn-payment-highlight btn-payment-highlight-indigo">
-                        <span class="text-gradient-light">MUA FULL SET – TIẾT KIỆM 32%</span>
+                        <span class="text-red-600 font-extrabold animate-pulse">MUA FULL SET – TIẾT KIỆM 32%</span>
                     </button>
                 </div>
             </div>
@@ -926,4 +922,3 @@
     </script>
 </body>
 </html>
-
